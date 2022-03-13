@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Vite App</title>
+</head>
+<script type="module" src="./src/main.ts"></script>
+
+<body>
+	<div>
+		<h3>ERC20</h3>
+		<ul>
+			<li>
+				<span>MyToken：</span>
+				<span id="m_token"></span>
+			</li>
+			<li>
+				<span>name：</span>
+				<span id="m_name"></span>
+			</li>
+			<li>
+				<span>symbol：</span>
+				<span id="m_symbol"></span>
+			</li>
+			<li>
+				<span>decimals：</span>
+				<span id="m_decimals"></span>
+			</li>
+			<li>
+				<span>totalSupply：</span>
+				<span id="m_totalSupply"></span>
+			</li>
+			<li>
+				<input value="0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266" type="text" id="m_addr_in" placeholder="address">
+				<input value="111111111111" type="number" id="m_val_in" placeholder="value">
+				<button onclick="incrementTotalSupply()">incrementTotalSupply</button>
+			</li>
+			<li>
+				<input value="0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266" type="text" id="m_addr_de">
+				<input value="1" type="number" id="m_val_de">
+				<button onclick="decrementTotalSupply()">decrementTotalSupply</button>
+			</li>
+			<li>
+				<input value="0x4524000175461877450040017976794964123046" type="text" id="m_to">
+				<input value="19" type="number" id="m_tramsfer_val">
+				<button onclick="transfer()">transfer</button>
+			</li>
+			<li>
+				<input value="0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266" type="text" id="m_all_f">
+				<input value="0xCace1b78160AE76398F486c8a18044da0d66d86D" type="text" id="m_all_t">
+				<button onclick="allowance()">allowance</button>
+				<span id="m_all_v"></span>
+			</li>
+		</ul>
+		<h3>ERC20 当前用户信息</h3>
+		<ul>
+			<li>
+				<span>address：</span>
+				<span id="m_user"></span>
+			</li>
+			<li>
+				<span>balanceOf：</span>
+				<span id="m_balan"></span>
+			</li>
+		</ul>
+		<h3>Vault</h3>
+		<ul>
+			<li>
+				<span>Vault address：</span>
+				<span id="v_addr"></span>
+			</li>
+			<li>
+				<span>totalSupply：</span>
+				<span id="v_total"></span>
+			</li>
+			<li>
+				<input type="text" value="0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266" id="v_all_addr">
+				<button onclick="vaultAll()">vaultAll</button>
+				<span id="v_all_val">vaultAll</span>
+			</li>
+			<li>
+				<input type="text" value="1111" id="v_appr">
+				<button onclick="approveForm()">approveForm</button>
+			</li>
+			<li>
+				<input type="text" value="111" id="v_amount">
+				<button onclick="deposite()">deposite</button>
+			</li>
+		</ul>
+	</div>
+</body>
+
+</html>
