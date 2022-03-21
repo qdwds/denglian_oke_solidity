@@ -8,17 +8,15 @@ async function main() {
   const weth = await WETH.deploy();
   await weth.deployed();
   const wethAddress = weth.address;
-  console.log(await weth.signer.getAddress());
-  console.log(await weth.signer.getGasPrice());
-  
+  // WETH
   console.log("WETH address:", wethAddress);
 
   // factory 
-  const factoryAddrss = await factory();
-  console.log("factory address:",factoryAddrss);
+  const factoryAddress = await factory();
+  console.log("factory address:",factoryAddress);
   
   // router2
-  const router2Addrress = await router2(factoryAddrss, wethAddress);
+  const router2Addrress = await router2(factoryAddress, wethAddress);
   console.log("router2 address:",router2Addrress);
   
   // token1
