@@ -33,7 +33,6 @@ window.tokenURI = async () => {
     const OID = document.getElementById("data_id");
     if(OID){
         const result = await nft.tokenURI(1);
-        console.log(result);
         document.getElementById("tokenuri").innerHTML = result;
     }
     
