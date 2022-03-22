@@ -1,7 +1,7 @@
 /**
  *Submitted for verification at Etherscan.io on 2020-06-05
 */
-
+// SPDX-License-Identifier: MIT
 pragma solidity =0.6.6;
 
 interface IUniswapV2Factory {

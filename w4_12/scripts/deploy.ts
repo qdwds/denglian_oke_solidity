@@ -1,6 +1,8 @@
 
 import { ethers } from "hardhat";
-import { token } from "./mytoken";
+import { MyTokenMarket } from "./MyTokenMarket";
+import { myToken1 } from "./myToken1";
+import { myToken2 } from "./myToken2";
 import { factory } from "./UniswapV2Factory";
 import { router2 } from "./UniswapV2Route2";
 async function main() {
@@ -20,14 +22,15 @@ async function main() {
   console.log("router2 address:",router2Addrress);
   
   // token1
-  const token1 = await token("A token Coin", "ATC",1000);
-  console.log("token1 address:", token1);
+  const myToken1Address = await myToken1();
+  console.log("myToken1 address:", myToken1Address);
   
   // token2
-  const token2 = await token("A token Coin", "ATC",1000);
-  console.log("token2 address:",token2);
+  // const myToken2Address = await myToken2();
+  // console.log("myToken2 address:",myToken2Address);
 
- 
+    
+ await MyTokenMarket(myToken1Address, router2Addrress, wethAddress);
   
 }
 

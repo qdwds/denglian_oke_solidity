@@ -1,5 +1,5 @@
 import * as dotenv from "dotenv";
-
+import { testKey } from "../common/key";
 import { HardhatUserConfig, task } from "hardhat/config";
 import "@nomiclabs/hardhat-etherscan";
 import "@nomiclabs/hardhat-waffle";
@@ -27,9 +27,10 @@ const config: HardhatUserConfig = {
 	// solidity: "0.8.4",
 	solidity: {
 		compilers: [
-			{ version: "0.8.4" },
 			{ version: "0.4.18" },
 			{ version: "0.5.16" },
+			{ version: "0.6.2" },
+			{ version: "0.8.4" },
 			{
 				version: "0.6.6",
 				settings: {
@@ -56,6 +57,11 @@ const config: HardhatUserConfig = {
 			gasPrice: "auto",
 			gasMultiplier: 10,
 			accounts: ["0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80"]
+		},
+		oke: {
+			url: "https://exchaintestrpc.okex.org",
+			chainId: 65,
+			accounts:testKey
 		}
 	},
 	gasReporter: {
